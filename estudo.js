@@ -1,95 +1,31 @@
-let tabuada = 2;
-
-function escreva(){
-    document.write("Tabuada do " + tabuada + "<br>");
-    document.write(tabuada + " x 1 = " + (tabuada*1)+"<br>");
-    document.write(tabuada + " x 2 = " + (tabuada*2)+"<br>");
-    document.write(tabuada + " x 3 = " + (tabuada*3)+"<br>");
-    document.write(tabuada + " x 4 = " + (tabuada*4)+"<br>");
-    document.write(tabuada + " x 5 = " + (tabuada*5)+"<br>");
-    document.write(tabuada + " x 6 = " + (tabuada*6)+"<br>");
-    document.write(tabuada + " x 7 = " + (tabuada*7)+"<br>");
-    document.write(tabuada + " x 8 = " + (tabuada*8)+"<br>");
-    document.write(tabuada + " x 9 = " + (tabuada*9)+"<br>");
-    document.write(tabuada + " x 10 = " + (tabuada*10)+"<br>");
-    
+body {
+   margin: 0;
+   padding: 0;
 }
-
-function minhaTabuada() {
-    for(let i=1; i <= 10; i++) {
-        document.write("Tabuada do " + i + "<br>");
-        for(let j=1; j <= 10; j++){
-            document.write(i + " x " + j + " = " + (j*i)+"<br>");
-        }
-        document.write("<br>");
-    }
+.calculadora {
+    background: rgb(0, 0, 0);
+    width: 200px;
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
 }
-
-function quadrado(){
-    for(let i = 1; i <= 10; i++){
-        document.write("O quadrado de " + i + " é " + (i*i) + "<br>");
-    }
+.calculadora input{
+    background:rgba(255, 253, 253, 0.442);
+    border-radius: 10px;
 }
-
-function moeda(atual){
-   return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+#btnCalc{
+    background: white;
+    margin-top: 20px;
+    padding: 5px;
 }
-
-function calcula(){
-    let val = document.getElementById("valor").value;
-    let j = document.getElementById("juros").value;
-    let t = document.getElementById("meses").value;
-    if(!Number(val)){
-        alert("O valor deve ser um número.");
-        document.getElementById("valor").value = "";
-        document.getElementById("valor").focus();
-        return
-    }
-    if(!Number(j)){
-        alert("O valor do juros ser um número.");
-        document.getElementById("juros").value = "";
-        document.getElementById("juros").focus();
-        return
-    }
-    if(!Number(t)){
-        alert("O valor do tempo tem ser um número.");
-        document.getElementById("meses").value = "";
-        document.getElementById("meses").focus();
-        return
-    }
-    let res = val;
-    for (let m=1; m <= t;m++) {
-         res = val * (1+(j/100));
-         val = res;
-        // document.write("Mês " + m + " = " + moeda(res) + "<br>");
-    }
-
-    document.getElementById("total").innerHTML="Total: " + moeda(res);
-    //document.write("Resultado: "+moeda(res) + "<br>");
+#btnCalc:hover{
+    background: rgb(243, 195, 195);
+    color: black;
+    cursor: pointer;
 }
-
-function somarNotas(){
-    let n1 = document.getElementById("t1").value;
-    let n2 = document.getElementById("t2").value;
-    let n3 = document.getElementById("t3").value;
-    let r = Number(n1) + Number(n2) + Number(n3);
-    document.getElementById("resultadosoma").innerHTML = "Soma: " + r;
-}
-
-function mediaNotas(){
-    let n1 = document.getElementById("t1").value;
-    let n2 = document.getElementById("t2").value;
-    let n3 = document.getElementById("t3").value;
-    let r = Number(n1) + Number(n2) + Number(n3);
-    r = r / Number(3)
-    document.getElementById("resultadomedia").innerHTML = "Média: " + r;
-}
-
-function fecharNotas(){
-    let n1 = document.getElementById("t1").value;
-    let n2 = document.getElementById("t2").value;
-    let n3 = document.getElementById("t3").value;
-    let r = Number(n1) + Number(n2) + Number(n3);
-    r = 180 - r;
-    document.getElementById("resultadofechar").innerHTML = "Falta: " + r;
+#psTotal {
+    background: rgb(7, 250, 225);
+    color: black;
+    padding: 10px;
+    margin-bottom: 5px;
 }
