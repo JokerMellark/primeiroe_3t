@@ -59,12 +59,15 @@ function calcula() {
     }
 
     let res = val;
+    let texto = "";
     for (let m = 1; m <= t; m++) {
         res = val * (1 + (j / 100));
         val = res;
-       // document.write("Mês " + m + " = " + moeda(res) + "<br>")
+        texto += m + ": " + moeda(res) + "<br>";
+        // document.write("Mês " + m + " = " + moeda(res) + "<br>")
     }
-    document.getElementById("total").innerHTML= "Total: " + moeda(res);
+    document.getElementById("mes").innerHTML=texto;
+    document.getElementById("total").innerHTML = "Total: " + moeda(res);
     //document.write("Resultado: " + moeda(res));
 }
 
