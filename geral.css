@@ -15,6 +15,19 @@ body {
     background:rgba(255, 253, 253, 0.442);
     border-radius: 10px;
 }
+.calcF {
+    display: none;
+}
+#calcFin{
+    display: none;
+}
+#calcFin:checked + .calculadora .calcF {
+    display: block;
+}
+.calculadora input:focus{
+    background: white;
+    color: black;
+}
 #btnCalc{
     background: white;
     margin-top: 20px;
@@ -39,5 +52,5 @@ body {
     border-style: dashed;
     border-color: white;
     border-width: 2px;
-    margin-top: 10px;A
-}
+    margin-top: 10px;
+ }
