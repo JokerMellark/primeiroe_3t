@@ -11,10 +11,24 @@ body {
     text-align: center;
     box-shadow: 5px 5px pink;
 }
+.calculadoraESG{
+    background: rgb(137, 226, 178);
+    width: 200px;
+    color: rgb(237, 6, 241);
+    padding: 20px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 5px 5px rgb(2, 0, 0);
+ }
 .calculadora input{
     background:rgba(255, 253, 253, 0.442);
     border-radius: 10px;
 }
+.calculadoraESG input{
+    background:rgba(255, 253, 253, 0.442);
+    border-radius: 10px; 
+ }
+
 .calcF {
     display: none;
 }
